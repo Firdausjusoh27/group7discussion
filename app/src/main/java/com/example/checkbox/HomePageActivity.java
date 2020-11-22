@@ -13,6 +13,7 @@ public class HomePageActivity extends AppCompatActivity {
 
     private Button relativeBtn;
     private Button constraintBtn;
+    private Button gridBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class HomePageActivity extends AppCompatActivity {
         relativeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomePageActivity.this, MainActivity.class);
+                Intent intent = new Intent(HomePageActivity.this, RelativeLayout.class);
                 startActivity(intent);
             }
         });
@@ -38,6 +39,17 @@ public class HomePageActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        gridBtn = findViewById(R.id.gridbtn);
+        gridBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(HomePageActivity.this, GridLayout.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 

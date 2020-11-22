@@ -1,9 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RelativeLayout">
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bigTitle"
+        android:text="MultipleActivitiesAndLayout"
+        android:textSize="22dp"
+        android:background="@color/teal_700"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bigTitle"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_light"
+        android:gravity="center"
+        android:text="This is a Relative Layout Page"
+        android:textSize="25dp"
+        />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="false"
+        android:text="Text view #1"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/text1"
+        android:text="Text View #2"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text2"
+        android:layout_alignParentRight="true"
+        android:text="Text View #3"
+        android:textSize="17dp"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="Enter your Name: "
+        android:textSize="17dp"
+        />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toRightOf="@+id/name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="0dp" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit"
+        android:layout_alignParentRight="true"
+        android:text="Back to Home"
+        />
+
+
+</RelativeLayout>
