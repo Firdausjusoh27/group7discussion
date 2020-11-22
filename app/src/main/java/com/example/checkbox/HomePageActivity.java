@@ -34,7 +34,7 @@ public class HomePageActivity extends AppCompatActivity {
         constraintBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(HomePageActivity.this, MainActivity.class);
+                Intent intent = new Intent(HomePageActivity.this, ConstraintLayout.class);
                 startActivity(intent);
             }
         });
